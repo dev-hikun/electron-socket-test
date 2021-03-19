@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Socket.io Client</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io();
+
+    var buttonClick = () => {
+      console.log('clicked');
+      socket.emit('message', 'connect test complate');
+    }
+
+    socket.on('recMsg', function(data) {
+      console.log('rec Msg', data);
+      var container = document.getElementsByClassName('container');
+      container.item(0).appendChild(document.createTextNode(data.msg));
+    })
+
+    socket.on('complate', function(data){
+      console.log('receive Message ::', data);
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <button type="button" onclick="buttonClick()">connect Event</button>
+  </div>
+</body>
+</html>

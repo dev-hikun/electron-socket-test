@@ -1,0 +1,32 @@
+{
+  "name": "electron-socket-test",
+  "version": "1.0.0",
+  "description": "Electron socket.io test",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint",
+    "electron": "tsc index.ts && electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-hikun/electron-socket-test.git"
+  },
+  "keywords": [
+    "electron",
+    "socket"
+  ],
+  "author": "Heehyeon Lee <dev.hikun@gmail.com> (http://dev-hikun.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dev-hikun/electron-socket-test/issues"
+  },
+  "homepage": "https://github.com/dev-hikun/electron-socket-test#readme",
+  "dependencies": {
+    "electron": "12.0.1",
+    "express": "4.17.1",
+    "socket.io": "4.0.0"
+  },
+  "devDependencies": {
+    "typescript": "4.2.3"
+  }
+}
